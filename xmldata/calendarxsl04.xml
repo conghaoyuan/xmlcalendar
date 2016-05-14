@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../calendar.xsl"?>
+<week>
+    <day id="day0">
+        <time id="time00"> </time>
+        <time id="time01"> </time>
+        <time id="time02"> </time>
+        <time id="time03"> </time>
+        <time id="time04"> </time>
+        <time id="time05"> </time>
+        <time id="time06"> </time>
+        <time id="time07"> </time>
+        <time id="time08"> </time>
+        <time id="time09"> </time>
+        <time id="time10"> </time>
+        <time id="time11"> </time>
+    </day>
+
+    <day id="day1">
+        <time id="time00"> </time>
+        <time id="time01"> </time>
+        <time id="time02"> </time>
+        <time id="time03"> </time>
+        <time id="time04"> </time>
+        <time id="time05"> </time>
+        <time id="time06"> </time>
+        <time id="time07"> </time>
+        <time id="time08"> </time>
+        <time id="time09"> </time>
+        <time id="time10"> </time>
+        <time id="time11"> </time>
+    </day>
+
+    <day id="day2">
+        <time id="time00">吃饭</time>
+        <time id="time01"> </time>
+        <time id="time02"> </time>
+        <time id="time03"> </time>
+        <time id="time04"> </time>
+        <time id="time05"> </time>
+        <time id="time06"> </time>
+        <time id="time07"> </time>
+        <time id="time08"> </time>
+        <time id="time09"> </time>
+        <time id="time10"> </time>
+        <time id="time11"> </time>
+    </day>
+
+    <day id="day3">
+        <time id="time00"> </time>
+        <time id="time01"> </time>
+        <time id="time02"> </time>
+        <time id="time03"> </time>
+        <time id="time04"> </time>
+        <time id="time05"> </time>
+        <time id="time06"> </time>
+        <time id="time07"> </time>
+        <time id="time08"> </time>
+        <time id="time09"> </time>
+        <time id="time10"> </time>
+        <time id="time11"> </time>
+    </day>
+
+    <day id="day4">
+        <time id="time00"> </time>
+        <time id="time01"> </time>
+        <time id="time02"> </time>
+        <time id="time03"> </time>
+        <time id="time04"> </time>
+        <time id="time05"> </time>
+        <time id="time06"> </time>
+        <time id="time07">开会</time>
+        <time id="time08"> </time>
+        <time id="time09"> </time>
+        <time id="time10"> </time>
+        <time id="time11"> </time>
+    </day>
+
+    <day id="day5">
+        <time id="time00"> </time>
+        <time id="time01"> </time>
+        <time id="time02"> </time>
+        <time id="time03"> </time>
+        <time id="time04"> </time>
+        <time id="time05"> </time>
+        <time id="time06"> </time>
+        <time id="time07"> </time>
+        <time id="time08"> </time>
+        <time id="time09"> </time>
+        <time id="time10"> </time>
+        <time id="time11"> </time>
+    </day>
+
+    <day id="day6">
+        <time id="time00"> </time>
+        <time id="time01"> </time>
+        <time id="time02"> </time>
+        <time id="time03"> </time>
+        <time id="time04"> </time>
+        <time id="time05"> </time>
+        <time id="time06"> </time>
+        <time id="time07"> </time>
+        <time id="time08"> </time>
+        <time id="time09"> </time>
+        <time id="time10"> </time>
+        <time id="time11"> </time>
+    </day>
+</week>

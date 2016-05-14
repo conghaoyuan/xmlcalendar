@@ -1,0 +1,79 @@
+.caption{
+	font-size: 20px;
+	font-family: 微软雅黑;
+	color:#333;
+	line-height: 40px;
+}
+td{
+	text-align: center;
+}
+
+td:hover{
+	background-color:#ccffcc;
+}
+
+.header{
+	background-color: #ccffcc;
+	font-weight: bold;
+}
+
+.week{
+	background-color: #9acd32;
+	font-weight: bold;
+}
+.time{
+	background-color: #ffffcc;
+	font-weight: bold;
+}
+.weeks{
+	background-color: #ffffcc;
+}
+.day{
+	background-color: #ffffcc;
+}
+.scheudle{
+	background-color: #ffffcc;
+	color:#ff0000;
+	font-size: 20px;
+	font-weight: bold;
+}
+a{
+	text-decoration: none;
+}
+a:hover{
+	color: #ff0000;
+}
+
+#search-box{
+	width:326px;
+	height:29px;
+	margin:0 auto;
+	position: absolute;
+	top: 61px;
+	right: 7%;
+  	z-index: 1000;
+  	border: none;
+} 
+
+.input-box{ 
+	width:180px; height:20px;
+ 	padding-left:5px; 
+ 	border:0;
+}
+
+.button{ 
+	background: #9acd32;
+} 
+
+.total_query{
+	font-size: 18px;
+	color: #0000ff;
+	text-align: right;
+	padding-right: 30px;
+}
+.sche_content{
+	width:125px;
+	font-size: 14px;
+	word-break: break-all;
+	word-wrap: break-word;
+}
