@@ -10,7 +10,7 @@ if(count($arr_content)!=2){
 	echo "<script type='text/javascript'>alert('输入格式不合法,请重新输入');window.location.href='http://xmlcalendar.com'</script>";
 }else{
 	$arr_week = explode('-', $arr_content[0]);	//要添加的周次
-	if(count($arr_week)!=2 || $arr_week[0]>$arr_week[1]){
+	if(count($arr_week)!=2 || $arr_week[0]>$arr_week[1] || $arr_week[1]>56){
 		echo "<script type='text/javascript'>alert('输入周次不合法,请重新输入');window.location.href='http://xmlcalendar.com'</script>";
 	}else{
 		for ($i=$arr_week[0]; $i <= $arr_week[1]; $i++) { 

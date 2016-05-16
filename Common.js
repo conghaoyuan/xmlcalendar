@@ -13,7 +13,6 @@ function getWeek(){
     totalDays = getDay();
     var week = Math.round(totalDays/7);
     return week;
-
 }
 //判断是否为闰年
 function isRun(year){
@@ -59,6 +58,38 @@ function getDay(){
     return totalDays;
 }
 
+//根据多少天推出为几月几号  待实现
+function getMonthDayByTotalDays(totalDays){
+    var now = new Date();
+    var days = new Array(12);
+    var totalDay = 0;
+    var month = 0;
+    days[0] = 31;
+    days[2] = 31;
+    days[3] = 30;
+    days[4] = 31;
+    days[5] = 30;
+    days[6] = 31;
+    days[7] = 31;
+    days[8] = 30;
+    days[9] = 31;
+    days[10] = 30;
+    days[11] = 31;
+    if(isRun(years)){
+        days[1] = 29;
+    }
+    else{
+        days[1] = 28;
+    }
+    for(var i=0;i<days.length;i++){
+        totalDay += days[i];
+        if(totalDay>totalDays){
+            month = i+1;
+            alert(totalDay-totalDays);
+            break;
+        }
+    }
+}
 //调到相关周的xml文件
 function hrefToWeek(){
 	if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
@@ -139,17 +170,35 @@ function getCurTime(curId){
 
 window.onload = function(){
     var now = new Date();
-    var curYear = now.getYear()+1900;
-    var curMonth = now.getMonth()+1;
+    var curYear = now.getYear()+1900;  //取得当前年份
+    var curMonth = now.getMonth()+1;    //取得当前月份
+    var curDay = now.getDay();
     var cur =  curYear+"年"+curMonth+"月";
     var curYearMonth = document.getElementById("curYearMonth");
     var curUrl = window.location.href;
     var xmlName = curUrl.substr(curUrl.length-6,2);
     //alert(xmlName);
-    var locationXml = parseInt(xmlName) ;
+    var locationXml = parseInt(xmlName);
     //curYearMonth.innerText = cur;
     var curWeek = curYear+" 年 第 "+locationXml+" 周";
     curYearMonth.innerText = curWeek;
+    var week = getWeek();
+    if(week == locationXml){
+        var curDayEle = document.getElementById("week"+curDay);
+        curDayEle.style.backgroundColor = "#ff6600";
+        //console.log(curDayEle.getElementsByTagName("div"));
+        //getMonthDayByWeeks(locationXml , curDay);
+    }
+}
+
+ 
+//取得多少周中的星期几为 几月几号  待实现
+function getMonthDayByWeeks(weeks , day){
+    var totalDaysOfWeeks = weeks*7;
+    getMonthDayByTotalDays(totalDaysOfWeeks);
+    //alert(totalDaysOfWeeks);
+
+    //return curweek+"月"+day+"号";
 }
 //判断第几周为本年中的几月份
 function getMonthByWeek(week){
@@ -293,7 +342,7 @@ function addSch(){
     var choose_day = curYear + "年" + " 第"+locationXml+ "周 " + curWeek
         + " " + curAddTime1;
     if(confirm("需要循环添加吗")){
-        var scheudle = prompt("请输入要循环添加的周次和日程以空格隔开 如：(1-3 开会)");
+        var scheudle = prompt("请输入要循环添加的周次和日程并以空格隔开 如：(1-3 开会)");
         if(scheudle!=null){ 
             window.location.href="../mul_sche_add.php?content="+scheudle+"&day="+curDayTime;
         }else{
@@ -317,7 +366,7 @@ function addSch(){
 
 function validateForm(){
     var queryContent = document.forms['queryForm']['query'].value;
-    if(queryContent==null || queryContent==""){
+    if(queryContent==null || queryContent=="查询周次或者日程内容"){
         alert("请输入查询内容");
         return false;
     }

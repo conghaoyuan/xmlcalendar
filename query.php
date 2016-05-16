@@ -1,6 +1,6 @@
 <?php
 header("Content-type:text/html;charset=utf-8");
-$queryContent = $_POST['query'];
+$queryContent = trim($_POST['query']);
 if(is_numeric($queryContent)){
 	if($queryContent<57 && $queryContent>0){
 		if($queryContent<10){
